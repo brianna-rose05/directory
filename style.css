@@ -1,0 +1,524 @@
+html {
+  --dark-gray: #696969;
+  --light-gray: #D3D3D3;
+  --focus-blue: #076585;
+  --card-background: #F2F4F5;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: -0.05rem;
+}
+
+.subtext {
+    font-size: 1.125rem;
+    color: var(--dark-gray);
+}
+
+small {
+    font-size: 1rem;
+    padding: -10px; 
+    color: var(--focus-blue);
+
+}
+
+.flex_column {  /** PAGE HEADER */
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+  margin: 1.5rem 0rem;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 30px 20px 30px 20px; /* top, right, bottom, left */
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/*x ------------------------------- SEARCH BAR ------------------------------- */
+.search_bar {
+    size: 48px;
+    height: 48px; /*box height */
+    border-width: 2px;
+    border-radius: 50%;
+    max-width: 561px;
+    --icon-size: 36px;  /*svg height */
+    position: relative;
+    margin: 18px; 
+    --icon-vertical-margin: 6px; 
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    
+
+}
+.search_bar_input[type='search']::placeholder {
+    color: var(--light-gray);
+    opacity: 1;
+}
+
+.search_bar_input[type='search']:focus {
+    border-color: var(--focus-blue); 
+    box-shadow: 0px 0px 1.5px var(--focus-blue);
+    outline: 1px solid transparent; 
+}
+
+.search_bar_input[type='search']::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='rgb(148, 148, 148)' %3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z' /%3E%3C/svg%3E%0A");
+    height: 24px;
+    width: 24px;
+    color: var(--light-gray)
+}
+
+.search_bar_input[type='search'] {
+    height: 100%;
+    border: 1.5px solid var(--light-gray);
+    border-radius: 36px;
+    width: 100%;
+    font-family: "Nunito", sans-serif;
+    color: var(--dark-gray);
+    font-size: 1rem;
+    padding-left: 60px;
+    padding-right: 18px;
+    background: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.search_icon {
+    fill: var(--light-gray);
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/*x -------------------------------- CARD GRID ------------------------------- */
+
+.card_grid {
+    display: grid;
+    gap: 50px 50px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 20px;
+    width: 100%;
+}
+
+@media (min-width: 425px) {
+    .card_grid {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+         padding: 0px;
+    }
+}
+
+.card_outer {
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    height: auto;
+    width: 100%;
+    position: relative;
+    background-color: var(--card-background);
+
+}
+.card_inner {
+    border-radius: 14px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background: white;
+    padding: 25px; 
+    height: auto;
+    text-align: left;
+}
+/* -------------------------------------------------------------------------- */
+.card_top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.card_top_left {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    gap: 10px; 
+}
+
+.logo {
+    height: 60px;
+    width: 60px; 
+    object-fit: cover;
+    border-radius: 100%;
+}
+.biz_name {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.save_btn {
+    border-radius: 100%;
+    border: 1.5px solid var(--card-background);
+    height: 36px;
+    width: 36px;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23696969'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; 
+    background-size: 60%; 
+    background-position: center; 
+    padding: 10px;
+}
+.save_btn:hover {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23076585'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E");
+}
+
+.save_btn.is-clicked {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23076585'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E");
+}
+
+/* -------------------------------------------------------------------------- */
+.card_line {
+    border: none;
+    height: 1.5px;
+    background-color: var(--card-background);
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.card_bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    
+}
+
+.card_row {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    gap: 5px
+}
+.info_text {
+     color: var(--dark-gray);
+     line-height: 1;
+}
+.info_text_spacing {
+     color: var(--dark-gray);
+}
+
+.info_text_special {
+    color: var(--focus-blue)
+}
+
+.icons {
+    height: 20px;
+    width: 20px;
+    fill: var(--dark-gray);
+    flex-shrink: 0;
+}
+
+/*x ------------------------- MOVING GRADIENT BUTTON ------------------------- */
+@property --button-fill {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: transparent;
+}
+@property --button-fill-stop {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 0%;
+}
+@property --rg-1-x {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+@property --rg-1-y {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+
+@property --rg-2-x {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 20%;
+}
+
+@property --rg-2-y {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 70%;
+}
+
+@property --rg-3-x {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 70%;
+}
+
+@property --rg-3-y {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 20%;
+}
+
+@property --rg-4-x {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+
+@property --rg-4-y {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+@keyframes gradient-movement {
+  30% {
+    --rg-1-x: 70%;
+    --rg-1-y: 20%;
+  }
+
+  40% {
+    --rg-2-x: 120%;
+    --rg-2-y: 50%;
+  }
+  45% {
+    --rg-4-x: -10%;
+    --rg-4-y: 10%;
+  }
+  50% {
+    --rg-3-x: 50%;
+    --rg-3-y: 50%;
+  }
+
+  70% {
+    --rg-1-x: -10%;
+    --rg-2-y: -20%;
+  }
+}
+.card_btn {
+  font-family: 'Nunito', sans-serif;
+  color: black;
+  font-size: 0.925rem;
+  margin-top: auto;
+  align-self: flex-end;
+  translate: 0 10px;
+  padding: 0.5lh 4ch;
+  border-radius: 100vw;
+  border: 2px solid transparent;
+  transition: --button-fill 1s, --button-fill-stop 0.5s;
+  animation: gradient-movement 5s alternate infinite ease-in-out;
+  animation-delay: calc(sibling-index() * -2000ms);
+  background: linear-gradient(
+        to left,
+        var(--button-fill) var(--button-fill-stop),
+        transparent
+      )
+      padding-box,
+    radial-gradient(
+        circle 120px at var(--rg-1-x) var(--rg-1-y),
+        var(--focus-blue),
+        transparent
+      )
+      border-box,
+    radial-gradient(
+        circle 150px at var(--rg-2-x) var(--rg-2-y),
+        #629fb2,
+        transparent
+      )
+      border-box,
+    radial-gradient(
+        circle 160px at var(--rg-3-x) var(--rg-3-y),
+        #4c1d95,
+        transparent
+      )
+      border-box,
+    radial-gradient(
+        circle 200px at var(--rg-4-x) var(--rg-4-y),
+        var(--focus-blue),
+        transparent
+      )
+      border-box;
+
+  background-position: center, center, bottom right, top left, top right,
+    bottom left;
+
+  background-repeat: no-repeat;
+}
+
+.card_btn{
+  --button-fill-stop: 100%;
+  --button-fill: white; 
+}
+
+.card_btn:is(:hover, :focus-visible) {
+  --button-fill-stop: 0%;
+  --button-fill: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+.top_card_text {
+    align-items: flex-end;
+    transform: translate(15px, -8px); /*right, up*/
+    color: var(--dark-gray);
+    font-size: 0.725rem;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.03rem;
+}
+
+/*x ------------------------- BOOKMARK SLIDE IN PANEL ------------------------ */
+.bookmark_btn {
+    border: none;
+    background-color: transparent;
+    padding: 0; 
+    background-image: url('/assets/icons/bookmark.svg');
+    height: 25px;
+    width: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    margin-left: auto;
+    cursor: pointer;
+}
+.bookmark_btn:hover {
+    cursor: pointer;
+    transition: 0.2s ease;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23076585'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E");
+}
+.slider_container {
+    position: relative;
+}
+.slider_container .slider_parent {
+    height: 100vh;
+    width:35vw;
+    padding: 20px;
+    position: fixed;
+    background-color: white;
+    border: 1px solid var(--card-background);
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+}
+.slider_container .slider_parent.active {
+    visibility: visible;
+    pointer-events: inherit;
+    transition: .2 all ease-in-out;
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 0.5s ease-out;
+}
+.slider_title {
+    font-size: 1.125rem;
+    color: black;
+}
+.slider_line {
+    border-top: none;
+    margin: 20px 0px;   /* margin: [top & bottom] [left & right] */
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--card-background);
+}
+
+.bookmark_img {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23000000'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z'/%3E%3C/svg%3E");
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+}
+.slider_container {
+    display: flex;
+    box-sizing: border-box;
+    align-items: top;
+    justify-content: space-between;
+    margin: 0.5rem 0rem;
+    gap: 1.5rem;
+}
+/* ---------------------------------- cards --------------------------------- */
+.bookmark_card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.bookmark_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    width: 100%;
+    gap: 6px;
+
+}
+.service {
+    align-items: flex-end;
+    color: var(--dark-gray);
+    font-size: 0.825rem;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0.03rem;
+}
+.biz_name_bookmark {
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    color: black;
+}
+.logo_bookmark {
+    width: 70px; 
+    height: 70px;
+    object-fit: cover;
+    border-radius: 100%;
+    flex:0;
+    align-items: center;
+}
+.info_text_bookmark {
+     color: var(--dark-gray);
+}
+
+/*x ------------------------------- HEADER ------------------------------- */
+.header_wrap {
+    display: flex;
+    flex-direction: column; 
+}
+.header_line {
+    border-top: none;
+    margin: 10px 0px;   /* margin: [top & bottom] [left & right] */
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--card-background);
+}
+

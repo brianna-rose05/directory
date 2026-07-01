@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Rapids Directory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <div class="wrapper">
+        <header class="header_wrap">
+            <button class="bookmark_btn"></button>
+            <div class="header_line"></div>
+        </header>
+        <main>
+        <section class="flex_column"> <!-- intro -->
+            <small>New to Grand Rapids?</small>
+            <h1>Your Neighbor Knows a Guy</h1>
+            <p class='subtext'>Verified local contractors for all your home service needs.</p>
+        </section> 
+        <div class="search_bar"> <!-- search bar -->
+        <svg class= "search_icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <input class="search_bar_input" placeholder="Search by service (e.g. plumber, roofing...)" type="search" id="searchInput"/>
+        </div> 
+        <section class="card_grid" id='contractor_list'></section> <!-- contractor list -->
+        <div class="slider_container"> <!-- bookmark panel -->
+            <div class="slider_parent active">
+                <div class="card_row">
+                    <div class="bookmark_img"></div>
+                    <p class="slider_title">Bookmarked</p>
+                </div>
+                <div class="slider_line"></div>
+                <div class="bookmark_card" id="bookmark_panel">
+                </div>
+            </div>
+        </div>
+        </main>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
+
