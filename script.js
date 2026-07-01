@@ -6,7 +6,7 @@ const contractors = [ //list of items
         area: "Serves Grand Rapids area",
         licensed: true,
         bio: "Licensed, insured, professional residential, custom built, construction company with 30+ years of experience. Grand Rapids, MN and surrounding area.",
-        logo: "/assets/martinetto_contracting.jpg",
+        logo: "assets/martinetto_contracting.jpg",
         saved: false
     },
     {
@@ -16,7 +16,7 @@ const contractors = [ //list of items
         area: "Serves Deer River area",
         licensed: true,
         bio: "Realistic budgets, clear communication, and support from design through construction. Helping homeowners build their dream home while keeping the process organized and on track.",
-        logo: "/assets/juntunen.jpg",
+        logo: "assets/juntunen.jpg",
         saved: false
     },
     {
@@ -26,7 +26,7 @@ const contractors = [ //list of items
         area: "Serves Grand Rapids area",
         licensed: true,
         bio: "Building with Quality, Tradition & Trust since 2011. From custom homes to construction management, we get the job done right.",
-        logo: "/assets/timbercraft_homes.jpg",
+        logo: "assets/timbercraft_homes.jpg",
         saved: false
     },
     {
@@ -36,7 +36,7 @@ const contractors = [ //list of items
         area: "Serves Grand Rapids area",
         licensed: true,
         bio: "Whether you need a new roof, storm damage repair, or expert guidance on your next project, Prestige Roofing delivers quality craftsmanship and peace of mind. Fully licensed, insured, and GAF certified—we protect what matters most.",
-        logo: "/assets/prestige_roofing.webp",
+        logo: "assets/prestige_roofing.webp",
         saved: false
     },
     {
@@ -46,7 +46,7 @@ const contractors = [ //list of items
         area: "Serves Grand Rapids area",
         licensed: false,
         bio: "Arctic Heating & Cooling, LLC is a trusted provider of heating, cooling and air quality services for residential and commercial properties across the Minnesota Northland.",
-        logo: "/assets/artic_logo.png",
+        logo: "assets/artic_logo.png",
         saved: false
     },
     {
@@ -56,7 +56,7 @@ const contractors = [ //list of items
         area: "Serves Grand Rapids area",
         licensed: false,
         bio: "Lease Landscaping, Inc. offers residential and commercial landscaping and excavating services throughout Grand Rapids and the surrounding areas.",
-        logo: "/assets/lease_logo.png",
+        logo: "assets/lease_logo.png",
         saved: false
     },
     {
@@ -76,7 +76,7 @@ const contractors = [ //list of items
         area: "Serves Grand Rapids area",
         licensed: true,
         bio: "At Ramsey Contractors, our roofing services are designed to cater to all your residential roofing needs. As your trusted roofing contractor, we specialize in both minor roof repairs and major roof replacement projects.",
-        logo: "/assets/ramsey_logo.png",
+        logo: "assets/ramsey_logo.png",
         saved: false
     },
     {
@@ -86,7 +86,7 @@ const contractors = [ //list of items
         area: "Serves Grand Rapids, Longville, Walker and Rnoemer areas",
         licensed: false,
         bio: "Our primary goal is customer satisfaction. With over twenty years in the concrete business I have the knowledge and experience to make your project a pleasant one.",
-        logo: "/assets/northwoods.png",
+        logo: "assets/northwoods.png",
         saved: false
     },
     {
@@ -96,7 +96,7 @@ const contractors = [ //list of items
         area: "Serves Grand Rapids area",
         licensed: false,
         bio: "The professionals at Rapid Garage Door & Awning provide top quality sales, installation, service and repair of garage doors, garage door openers, and retractable awnings and screens.",
-        logo: "/assets/rapid_garage.png",
+        logo: "assets/rapid_garage.png",
         saved: false
     },
     {
@@ -106,7 +106,7 @@ const contractors = [ //list of items
         area: "Serves Grand Rapids area",
         licensed: true,
         bio: "With a combined experience of 17 years, Northern Plumbing And Air is committed to providing quality plumbing and HVAC services. ",
-        logo: "/assets/northern_logo.png",
+        logo: "assets/northern_logo.png",
         saved: false
     },
     {
@@ -116,7 +116,7 @@ const contractors = [ //list of items
         area: "Serves Greater Itasca County area",
         licensed: true,
         bio: "Family owned and family centered business owned by AJ Smith and serving the community for over 16 years.",
-        logo: "/assets/ajsmith_logo.png",
+        logo: "assets/ajsmith_logo.png",
         saved: false
     },
     {
@@ -126,7 +126,7 @@ const contractors = [ //list of items
         area: "Serves Grand Rapids area",
         licensed: true,
         bio: "NCI has been installing spray foam insulation throughout Northern Minnesota for the past 15+ years.",
-        logo: "/assets/NCI-logo-white.png",
+        logo: "assets/NCI-logo-white.png",
         saved: false
     },
     {
@@ -136,7 +136,7 @@ const contractors = [ //list of items
         area: "Serves the Grand Rapids and Duluth areas",
         licensed: true,
         bio: "Our experienced team serves the greater Grand Rapids area with 15 years of expertise in drywall texture, edges, and painting for a clean, finished renovation.",
-        logo: "/assets/northland_logo.png",
+        logo: "assets/northland_logo.png",
         saved: false
     },
     {
@@ -146,7 +146,7 @@ const contractors = [ //list of items
         area: "Serves Grand Rapids area",
         licensed: true,
         bio: "For 18 years we have specialized in building residential custom homes, and renovating and remodeling homes and businesses for our friends and neighbors.",
-        logo: "/assets/bjahn_logo.png",
+        logo: "assets/bjahn_logo.png",
         saved: false
     }
 ]
