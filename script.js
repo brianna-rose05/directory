@@ -284,6 +284,7 @@ function renderBookmarkPanel() {
         bookmarkPanel.innerHTML += ` 
         <div class="slider_container"> 
         <img src="${contractor.logo}" class="logo_bookmark">
+        <div class="mobile_container">
             <div class="bookmark_content">
                 <p class="biz_name_bookmark">${contractor.name}</p>
                 <p class="service">${contractor.specialty}</p>
@@ -296,6 +297,7 @@ function renderBookmarkPanel() {
                 <button class="save_btn ${contractor.saved ? 'is-clicked' : ''}" data-name="${contractor.name}"></button>
                 </div>
             </div>
+        </div>
             <div class="slider_line">`
         localStorage.setItem('savedNames', JSON.stringify(savedContractorList.map(c => c.name)));
     });

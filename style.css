@@ -18,11 +18,14 @@ h1 {
     font-size: 2.5rem;
     font-weight: 500;
     letter-spacing: -0.05rem;
+    text-align: center;
+    line-height: none;
 }
 
 .subtext {
     font-size: 1.125rem;
     color: var(--dark-gray);
+    text-align: center;
 }
 
 small {
@@ -35,6 +38,7 @@ small {
 .flex_column {  /** PAGE HEADER */
   display: flex;
   flex-direction: column;
+  padding: 0px 5px;
   row-gap: 10px;
   align-items: center;
   margin: 1.5rem 0rem;
@@ -121,11 +125,20 @@ small {
     padding: 0 20px;
     width: 100%;
 }
-
-@media (min-width: 425px) {
+@media (max-width: 1024px) {
     .card_grid {
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-         padding: 0px;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0px;
+    }
+    .card_top_left .biz_name {
+      font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .card_grid {
+       grid-template-columns: 1fr;
+       gap: 50px;
     }
 }
 
@@ -197,7 +210,9 @@ small {
 .save_btn.is-clicked {
     cursor: pointer;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23076585'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E");
+    order: 1;
 }
+
 
 /* -------------------------------------------------------------------------- */
 .card_line {
@@ -418,7 +433,7 @@ small {
 }
 .slider_container .slider_parent {
     height: 100vh;
-    width:35vw;
+    width: 35vw;
     padding: 20px;
     position: fixed;
     background-color: white;
@@ -430,6 +445,12 @@ small {
     pointer-events: none;
     transform: translateX(100%);
     transition: transform 0.5s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .slider_container .slider_parent {
+    width: 85vw;
+  }
 }
 .slider_container .slider_parent.active {
     visibility: visible;
@@ -465,6 +486,29 @@ small {
     margin: 0.5rem 0rem;
     gap: 1.5rem;
 }
+
+.mobile_container {
+  display: contents;
+}
+
+@media screen and (max-width: 520px) {
+  .slider_container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .mobile_container {
+    display: flex;
+    gap: 10px;
+  }
+  .biz_name_bookmark {
+    font-size: 1.2rem;
+  }
+  .slider_container .bookmark_content {
+    gap: 10px;
+  }
+}
+
+
 /* ---------------------------------- cards --------------------------------- */
 .bookmark_card {
     display: flex;
@@ -504,6 +548,7 @@ small {
     border-radius: 100%;
     flex:0;
     align-items: center;
+    order: 0;
 }
 .info_text_bookmark {
      color: var(--dark-gray);
